@@ -1,0 +1,30 @@
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+  padding: 1.5rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  color: #718096;
+  text-align: center;
+}
+
+// Responsive
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem 0;
+  }
+}

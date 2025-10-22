@@ -1,0 +1,260 @@
+.orderDetail {
+  min-height: calc(100vh - 64px - 60px);
+  padding: 3rem 0 4rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #2c5282;
+  }
+}
+
+.title {
+  color: #1a202c;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #3182ce;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #3182ce;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #ebf8ff;
+    border-color: #2c5282;
+  }
+}
+
+.orderInfo {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.orderStatus {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statusBadge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.statusPending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.statusConfirmed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.statusShipped {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.statusDelivered {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.statusCancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.statusDefault {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.orderDates {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dateItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.shippingInfo,
+.notesInfo {
+  padding: 1rem 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.shippingInfo {
+  margin-bottom: 1rem;
+}
+
+.orderItems {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.itemsTitle {
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.itemCard {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.itemName {
+  color: #1a202c;
+}
+
+.itemPrice {
+  color: #718096;
+}
+
+.itemQuantity {
+  text-align: center;
+}
+
+.itemSubtotal {
+  text-align: right;
+  color: #1a202c;
+}
+
+.orderSummary {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.totalAmount {
+  color: #1a202c;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e53e3e;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: #fed7d7;
+    border-color: #c53030;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@media (max-width: 768px) {
+  .orderStatus {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .dateItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .itemCard {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .itemQuantity,
+  .itemSubtotal {
+    text-align: center;
+  }
+
+  .orderSummary {
+    flex-direction: column;
+    text-align: center;
+  }
+}
