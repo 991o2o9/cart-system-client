@@ -86,7 +86,7 @@ export const HomePage = () => {
           </div>
           <div className={styles.heroImage}>
             <div className={styles.heroImagePlaceholder}>
-              <span className={styles.heroIcon}>🖕</span>
+              <span className={styles.heroIcon}>👶🏾</span>
             </div>
           </div>
         </div>

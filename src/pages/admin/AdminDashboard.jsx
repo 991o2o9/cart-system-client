@@ -34,12 +34,12 @@ export const AdminDashboard = () => {
     );
   }
 
-  const formatCurrency = (amount) => {
-    return new Intl.NumberFormat('ru-RU', {
-      style: 'currency',
-      currency: 'RUB',
-    }).format(amount || 0);
-  };
+  // const formatCurrency = (amount) => {
+  //   return new Intl.NumberFormat('ru-RU', {
+  //     style: 'currency',
+  //     currency: 'KGS',
+  //   }).format(amount || 0);
+  // };
 
   return (
     <section className={styles.dashboard}>
@@ -110,7 +110,7 @@ export const AdminDashboard = () => {
                 weight="bold"
                 className={styles.statValue}
               >
-                {formatCurrency(stats?.total_revenue)}
+                {stats?.total_revenue}
               </Typography>
               <Typography variant="bodyT" className={styles.statLabel}>
                 Выручка
